@@ -1,0 +1,13 @@
+{# find eltillæg_ellev her: https://elspotpris.dk/?fbclid=IwAR1mgpQRy6oKzlDZCoOe-sNa6hEZJFr7QjC0W7Hi09QaJQPMaJTM5LnRKMU #}
+{% set costs =
+  { 
+  "expected_yearly_consumption": 7500,
+  "eltillaeg_ellev": 0.03544,
+  "abonnement_ellev": 0
+  } 
+%}
+
+{% 
+  set abbonnement_pr_kwh = costs.abonnement_ellev / (costs.expected_yearly_consumption/12) 
+%}
+{{ state_attr('sensor.eloverblik_tariff_sum','hourly')[now().hour] + costs.eltillaeg_ellev + abbonnement_pr_kwh }}
