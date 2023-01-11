@@ -1,4 +1,10 @@
-{# find eltillæg_ellev her: https://elspotpris.dk/?fbclid=IwAR1mgpQRy6oKzlDZCoOe-sNa6hEZJFr7QjC0W7Hi09QaJQPMaJTM5LnRKMU #}
+{# 
+find eltillæg_ellev here: https://elspotpris.dk/?fbclid=IwAR1mgpQRy6oKzlDZCoOe-sNa6hEZJFr7QjC0W7Hi09QaJQPMaJTM5LnRKMU
+In my case i have N1C and Norlys Flex El, which has a :
+"Fortjeneste, balanceomkostninger, profilomkostninger og handelsomkostninger Advarsel	0,03544 kr"
+Insert that below
+#}
+
 {% set costs =
   { 
   "expected_yearly_consumption": 7500,
